@@ -3,7 +3,7 @@ import numpy as np
 
 def clean_main(month):
     # path need to be changed
-    big_file_dir = "/Users/elychen/Desktop/CS448B_Final_Project/Code_Data/Airbnb_big_data/Nov_23_listings.csv"
+    big_file_dir = "/Users/elychen/Desktop/CS448B_Final_Project/Code_Data/Airbnb_big_data/Jul_23_listings.csv"
     summary_file_dir = "/Users/elychen/Desktop/CS448B_Final_Project/Code_Data/Airbnb_summary_data/" + str(month) + "_listings.csv"
 
     df_big = pd.read_csv(big_file_dir)
@@ -43,5 +43,5 @@ def remake_csv(df, month):
     filepath = "/Users/elychen/CS448B_Final_Project_Ely/CS448B_Final_Project/data_cleaned/" + str(month) + "_cleaned_listings_new.csv"
     df.to_csv(filepath, index=False)
 
-month = 11
+month = 7
 clean_main(month)
