@@ -55,8 +55,7 @@ def add_columns(source_df, target_df):
     res_df["price"] = pd.to_numeric(res_df["price"].str.replace('[^-.0-9]', ''))
     print(res_df["price"])
 
-    res_df["est_revenue_l30d_prorated"] = res_df["minimum_nights"] * res_df["number_of_reviews_l30d"] / res_df["accommodates"] * 12 * res_df["price"]
-    # res_df["est_revenue_l30d_prorated"] = source_df["minimum_nights"] * source_df["number_of_reviews_l30d"] / source_df["accommodates"] * 12 * source_df["price"] 
+    res_df["est_revenue_l30d_prorated"] = res_df["minimum_nights"] * res_df["number_of_reviews_l30d"] / res_df["accommodates"] * res_df["price"]
     print(res_df["est_revenue_l30d_prorated"])
 
     return res_df
